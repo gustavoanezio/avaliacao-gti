@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página que aparece na aba do navegador -->
+    <title>Formulário de Interesse - GTI Fatec Jahu</title>
+    <!-- Importação dos arquivos CSS para estilização -->
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/estilos_formularios.css" />
+</head>
+<body>
+    <!-- Container principal que engloba todo o conteúdo do site -->
+    <div id="corpo">
+        <!-- Cabeçalho do site com o título principal -->
+        <header>
+            <h1>Gestão de Tecnologia da Informação</h1>
+            <h2>Fatec Jahu</h2>
+        </header>
+        
+        <!-- Menu de navegação com links para as diferentes seções do site -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="grade.html">Grade Curricular</a></li>
+                <li><a href="historico.html">Histórico</a></li>
+                <li><a href="professores.html">Professores</a></li>
+                <li><a href="formulario.html" class="active">Interesse</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Conteúdo principal da página -->
+        <main>
+            <h2>Formulário de Interesse</h2>
+            
+            <p>Preencha o formulário abaixo para receber mais informações sobre o curso de Gestão de Tecnologia da Informação:</p>
+
+            <!-- Formulário para captação de interesse -->
+            <form action="confirmacao.html" method="GET">
+                <fieldset>
+                    <!-- Legenda do grupo de campos -->
+                    <legend>Dados Pessoais</legend>
+                    
+                    <!-- Campo para nome completo -->
+                    <label>
+                        Nome Completo: <input type="text" name="txt_nome" placeholder="Seu nome completo" required />
+                    </label>
+                    
+                    <!-- Campo para email -->
+                    <label class="label-50">
+                        E-mail: <input type="email" name="txt_email" placeholder="Seu melhor e-mail" required />
+                    </label>
+                    
+                    <!-- Campo para telefone -->
+                    <label class="label-50">
+                        Telefone: <input type="tel" name="txt_telefone" placeholder="(00) 00000-0000" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required />
+                    </label>
+                    
+                    <!-- Campo para data de nascimento -->
+                    <label class="label-50">
+                        Data de Nascimento: <input type="date" name="txt_data_nasc" required />
+                    </label>
+                    
+                    <!-- Campo para cidade de origem -->
+                    <label class="label-50">
+                        Cidade de Origem: <input type="text" name="txt_cidade_origem" required />
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <!-- Legenda do grupo de campos para informações adicionais -->
+                    <legend>Informações Adicionais</legend>
+                    
+                    <!-- Campo para seleção de escolaridade -->
+                    <label class="label-50">
+                        Escolaridade: 
+                        <select name="txt_escolaridade" required>
+                            <option value="">Selecione...</option>
+                            <option value="EM">Ensino Médio Completo</option>
+                            <option value="ES">Ensino Superior Incompleto</option>
+                            <option value="ESC">Ensino Superior Completo</option>
+                            <option value="PG">Pós-Graduação</option>
+                        </select>
+                    </label>
+                    
+                    <!-- Campo para seleção de período de interesse -->
+                    <label class="label-50">
+                        Período de Interesse: 
+                        <select name="txt_periodo" required>
+                            <option value="">Selecione...</option>
+                            <option value="M">Matutino</option>
+                            <option value="N">Noturno</option>
+                            <option value="A">Ambos</option>
+                        </select>
+                    </label>
+                    
+                    <!-- Campo para indicar como conheceu o curso -->
+                    <p class="label-50">
+                        <span class="d-block">Como conheceu o curso?</span> 
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="chk_conheceu" value="internet" />
+                            Internet
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="chk_conheceu" value="amigos" />
+                            Amigos
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="chk_conheceu" value="escola" />
+                            Escola
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="chk_conheceu" value="outro" />
+                            Outro
+                        </label>
+                    </p>
+                    
+                    <!-- Campo para indicar se já visitou a Fatec -->
+                    <p class="label-50">
+                        <span class="d-block">
+                            <span class="d-block">Já visitou a Fatec Jahu?</span>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="rdo_visitou" value="S" />
+                            Sim
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="rdo_visitou" value="N" checked />
+                            Não
+                        </label>                                          
+                    </p>
+                    
+                    <!-- Campo para comentários adicionais -->
+                    <label>
+                        Comentários ou Dúvidas:
+                        <textarea name="txt_comentarios" placeholder="Digite aqui suas dúvidas sobre o curso ou processo seletivo"></textarea>
+                    </label>
+                </fieldset>
+                
+                <!-- Botões do formulário -->
+                <p class="center">
+                    <button type="submit" class="botao-enviar">Enviar</button>
+                    <button type="reset">Limpar</button>
+                </p>
+            </form>
+            
+            <div class="info-adicional">
+                <h3>Outras formas de contato</h3>
+                <p>
+                    Você também pode obter mais informações sobre o curso por meio dos seguintes canais:
+                </p>
+                <ul>
+                    <li>Telefone: (14) 3622-8280</li>
+                    <li>E-mail: f020dir@cps.sp.gov.br</li>
+                    <li>Presencialmente: Rua Frei Galvão, s/n - Jardim Pedro Ometto, Jaú - SP</li>
+                </ul>
+            </div>
+        </main>
+        
+        <!-- Rodapé da página com informações de contato -->
+        <footer>
+            Faculdade de Tecnologia de Jahu
+            <address>
+                Rua Frei Galvão, s/n - Jardim Pedro Ometto
+                - Jaú - <abbr title="São Paulo - Brasil">SP</abbr>
+            </address>
+        </footer>
+    </div>  
+</body>
+</html>

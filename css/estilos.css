@@ -1,0 +1,260 @@
+/* 
+ * ESTILOS GERAIS DO SITE
+ * Este arquivo contém os estilos básicos aplicados a todos os elementos
+ * comuns do site como cabeçalho, rodapé, menu de navegação e layout geral.
+ */
+
+/* Reset básico para remover margens e paddings padrões */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+/* Estilos básicos para o corpo da página */
+body { 
+    background: #f5f5f5; 
+    padding: 2%; 
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container principal que define a largura máxima e centraliza o conteúdo */
+#corpo {
+    max-width: 1200px;
+    background: #FFF;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Estilização do cabeçalho do site */
+header {
+    background-color: #811f1f;
+    padding: 2%;
+    border-bottom: 1px solid #811f1f;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2em;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 5px;
+}
+
+header h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #ecf0f1;
+}
+
+/* Formatação do Menu de Navegação */
+nav {
+    background: #811f1f; 
+    text-align: center;
+    padding: 1.5%;  
+    border-bottom: 1px solid #811f1f;
+}
+
+nav ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0;
+}
+
+nav ul li { 
+    display: inline-block;  
+    margin: 0 5px; 
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: #ecf0f1;
+    padding: 8px 15px; 
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover { 
+    background-color: #811f1f; 
+    color: #db3434;
+}
+
+nav ul li a.active { 
+    background-color: #db3434;  
+    color: #FFF; 
+}
+
+/* Estilização do conteúdo principal */
+main {
+    padding: 3% 5%;
+    min-height: 400px;
+}
+
+main h2 {
+    color: #811f1f;
+    border-bottom: 2px solid #db3434;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+main h3 {
+    color: #811f1f;
+    margin: 20px 0 10px 0;
+}
+
+main p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Estilização de listas no conteúdo principal */
+main ul, main ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+main li {
+    margin-bottom: 5px;
+}
+
+/* Layout para seção "sobre o curso" na página inicial */
+#sobre-curso {
+    overflow: hidden;
+    margin-top: 2%;
+}
+
+#sobre-curso aside, #sobre-curso article {
+    background: #f9f9f9; 
+    width: 40%; 
+    float: left;
+    margin: 1%;  
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; 
+}
+
+#sobre-curso aside {
+    width: 35%; 
+    text-align: center;
+    padding: 1%;
+}
+
+#sobre-curso article {
+    width: 62%; 
+    text-align: left;  
+    padding: 2%;
+}
+
+#sobre-curso article p {
+    margin-bottom: 15px; 
+    line-height: 1.6;
+}
+
+#sobre-curso article h3 {
+    color: #811f1f;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 15px;
+}
+
+/* Estilização do rodapé */
+footer {
+    background: #db3434; 
+    text-align: center;
+    padding: 2%; 
+    border-top: 1px solid #1a2530;
+    color: #ecf0f1;
+    font-size: 0.9em;
+}
+
+footer address {
+    margin-top: 8px;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #bdc3c7;
+}
+
+/* Classe auxiliar para adicionar informações adicionais */
+.info-adicional {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.info-adicional h3 {
+    color: #db3434;
+    margin-top: 0;
+}
+
+/* Classes para estilização de figuras e imagens */
+figure {
+    border: 1px solid #eee;
+    border-radius: 8px; 
+    padding: 8px;
+    margin-bottom: 15px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    max-width: 100%; 
+    border-radius: 5px;
+    display: block;
+}
+
+figcaption {
+    background-color: #f5f5f5;  
+    border-radius: 5px;  
+    color: #555; 
+    padding: 8px;  
+    text-align: center;
+    margin-top: 8px;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* Classe para link de voltar */
+.voltar {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.voltar a {
+    color: #db3434;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.voltar a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade básica */
+@media only screen and (max-width: 768px) {
+    #sobre-curso aside, #sobre-curso article {
+        float: none;
+        width: 98%;
+        margin: 1% auto;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .label-50 {
+        width: 100%;
+        float: none;
+    }
+}

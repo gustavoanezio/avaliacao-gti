@@ -1,0 +1,179 @@
+/* 
+ * ESTILOS PARA FORMULÁRIOS
+ * Este arquivo contém estilos específicos para formulários
+ * do site, como o formulário de interesse.
+ */
+
+/* Estilização do fieldset (grupo de campos) */
+fieldset {
+    padding: 20px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilização da legenda do fieldset */
+legend {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #811f1f;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+/* Estilização de labels, inputs e selects */
+label, input, select { 
+    display: block; 
+    box-sizing: border-box; 
+}
+
+label {
+    padding: 10px 5px 5px 5px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+input, select, textarea { 
+    width: 100%; 
+    border: 1px solid #ddd; 
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+/* Estilo de foco nos campos do formulário */
+input:focus, select:focus, textarea:focus {
+    background: #f5f9fa; 
+    border: 1px solid #811f1f; 
+    outline: none;
+    box-shadow: 0 0 4px rgba(52, 152, 219, 0.5);
+}
+
+/* Classes para layout de formulário */
+.label-50 {
+    width: 49%; 
+    float: left;
+    margin-right: 1%;
+}
+
+.label-50:nth-child(even) {
+    margin-right: 0;
+}
+
+/* Alinhamento centralizado para botões */
+.center {
+    text-align: center; 
+    padding: 20px 0;
+    clear: both;
+}
+
+/* Estilização de botões */
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    background: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover { 
+    background-color: #dfe6e9; 
+}
+
+button:active { 
+    background-color: #bdc3c7; 
+}
+
+/* Estilo do botão de enviar */
+.botao-enviar { 
+    background-color: #db3434; 
+    color: white;
+    border-color: #811f1f;
+}
+
+.botao-enviar:hover {
+    background-color: #811f1f;
+}
+
+/* Estilização para exibir texto em bloco */
+.d-block { 
+    display: block; 
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Espaçamento para parágrafos no formulário */
+form p { 
+    padding: 10px 0; 
+    clear: both;
+}
+
+/* Estilização para checkboxes e radio buttons */
+input[type=checkbox], input[type=radio] {
+    display: inline;
+    width: auto;
+    margin-right: 5px;
+}
+
+/* Estilização para labels inline de checkbox e radio */
+.checkbox-inline { 
+    display: inline-block; 
+    border: 1px solid #eee; 
+    cursor: pointer; 
+    padding: 5px 10px;
+    margin-right: 8px;
+    border-radius: 3px;
+    background-color: white;
+    transition: all 0.2s ease;
+}
+
+.checkbox-inline:hover { 
+    background-color: #f5f9fa; 
+    border-color: #db3434;
+}
+
+/* Estilização para áreas de texto */
+textarea { 
+    display: block; 
+    box-sizing: border-box; 
+    width: 100%; 
+    height: 120px;
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.5;
+}
+
+/* Estilização para campos inválidos e válidos */
+input:invalid, select:invalid, textarea:invalid {
+    border: 1px solid #db3434;
+}
+
+input:valid, select:valid, textarea:valid {
+    border: 1px solid #2ecc71;
+}
+
+/* Responsividade para o formulário */
+@media only screen and (max-width: 768px) {
+    .label-50 {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+    }
+    
+    button {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}

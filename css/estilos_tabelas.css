@@ -1,0 +1,111 @@
+/* 
+ * ESTILOS PARA TABELAS
+ * Este arquivo contém os estilos específicos para as tabelas utilizadas
+ * no site, como a grade curricular e a lista de professores.
+ */
+
+/* Estilo básico para todas as tabelas */
+table {
+    border-collapse: collapse; /* Remove o espaço entre as células da tabela */    
+    border-radius: 8px; /* Borda arredondada */
+    overflow: hidden; /* Necessário para manter a borda arredondada */  
+    width: 100%;
+    margin: 25px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    background-color: white;
+}
+
+/* Cabeçalho da tabela */
+table thead tr { 
+    background: #811f1f; /* Cor de fundo escura */
+    color: #FFF; /* Texto branco */
+    text-transform: uppercase;
+    text-align: left;
+}
+
+/* Espaçamento interno para células do cabeçalho e corpo da tabela */
+table tbody td, table thead th { 
+    padding: 12px 15px; 
+}
+
+/* Borda inferior para separar as linhas da tabela */
+table tbody td {  
+    border-bottom: 1px solid #eee; 
+}
+
+/* Efeito hover nas linhas da tabela */
+table tbody tr:hover {
+    background-color: #f5f9fa; 
+    cursor: default;
+}
+
+/* Estilo zebrado para facilitar a leitura (linhas ímpares) */
+table tbody tr:nth-child(odd) { 
+    background-color: #f9f9f9; 
+}
+
+/* Estilo para links dentro das tabelas */
+table a {
+    color: #db3434;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+table a:hover {
+    text-decoration: underline;
+    color: #811f1f;
+}
+
+/* Responsividade para tabelas em telas pequenas */
+@media only screen and (max-width: 768px) {
+    table {
+        font-size: 0.9em;
+    }
+    
+    table thead th, table tbody td {
+        padding: 8px 10px;
+    }
+}
+
+/* Para telas muito pequenas, transformamos a tabela para melhor visualização */
+@media only screen and (max-width: 480px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    tr {
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+    
+    td:before {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #811f1f;
+    }
+    
+    /* Adicionar rótulos para cada coluna */
+    td:nth-of-type(1):before { content: "Disciplina"; }
+    td:nth-of-type(2):before { content: "Carga Horária"; }
+    td:nth-of-type(3):before { content: "Detalhes"; }
+}
